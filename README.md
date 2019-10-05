@@ -6,3 +6,18 @@ Repo for some of my Vagrantfiles for different purposes.
 * Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and install it.
 * Clone this repo: `git clone https://github.com/K9173A/vagrantfiles`.
 * Go to the directory with needed Vagrantfile and execute: `vagrant up`.
+
+## Shared folder
+* Install VirtualBox Guest Addition to be able to create shared folders:
+```bash
+vagrant plugin install vagrant-vbguest
+# The following should be executed from the Vagrantfile directory
+vagrant reload
+```
+* Execute on guest os:
+```bash
+# Add current user to the vboxsf group
+sudo usermod -aG vboxsf $(whoami)
+# Mount shared folder
+sudo mount -t vboxsf data /vagrant_data
+```
