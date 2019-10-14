@@ -21,3 +21,6 @@ sudo usermod -aG vboxsf $(whoami)
 # Mount shared folder
 sudo mount -t vboxsf data /vagrant_data
 ```
+
+### License
+ProductCatalog is released under the terms of the MIT license.  See [MIT](https://opensource.org/licenses/MIT) and [LICENSE](https://github.com/K9173A/vagrantfiles/blob/master/LICENSE) for more information.
